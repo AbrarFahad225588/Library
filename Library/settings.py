@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0^g0h^@#4^0_!-c8eir92!m0f$34=*#=3k)uknwu+hj6kv)#!1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
 ]
-CRISPY_TEMPLATE_PACK ='bootstrap5'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
 STATICFILES_DIRS = [BASE_DIR / 'static']
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
