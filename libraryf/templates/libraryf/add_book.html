@@ -1,0 +1,21 @@
+
+{% extends 'libraryf/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Add book{% endblock %}
+
+{% block content %}
+<h2>Add Book</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if messages %}
+        {% for message in messages %}
+            <div>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    {{ form|crispy }}
+    <button type="submit" class="abc" >Add Book</button>
+</form>
+
+{% endblock %}
+
+
